@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: hsl(200,10%,10%);
+  border-radius: 0.45rem;
+  color: white;
+  font-size: 8vw;
+}
+
+.screen {  
+  font-size: 10vw;
+  height: 1em;
+  min-height: 2.5rem;
+  width: 14ch;
+  color: black;
+  text-align: right;  
+  background-color: hsl(185,5%,50%);
+  font-family: 'VT323', monospace;
+  border: none;
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  overflow-x: hidden;
+}
+
+.calculator-body {
+  border: solid;
+  border-radius: 10px;
+  background-color: moccasin;
+  max-width: 600px;
+  min-width: 350px;
+}
+
+.calculator-top {
+  background-color: hsl(200, 10%, 10%);
+  padding: 1rem;
+}
+
+.inner-border {
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.left-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20px, 1fr));
+  grid-template-rows: minmax(20px, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.right-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20px, 1fr));
+  grid-template-rows: repeat(6, minmax(10px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+.button-light {
+  background-color: hsl(180,2%,60%);
+}
+
+.solar {
+  background-color: saddlebrown;
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+.zero {  
+  grid-area: 6 / 1 / 7 / 3;
+}
+
+.on {  
+  background-color: tomato;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.plus {  
+  grid-area: 4 / 1 / 7 / 2;
+}
+
+.equals {  
+  grid-area: 5 / 2 / 7 / 3;
+}
+
+@media (min-width: 600px) {
+  button {
+    font-size: 48px;
+  }
+  
+  .screen {
+    font-size: 60px;
+  }
+}
